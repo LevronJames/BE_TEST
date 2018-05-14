@@ -14,26 +14,44 @@
   <script src="//api.backendless.com/sdk/js/latest/backendless.min.js"></script>
 </head>
 <body>
+  
   <script src="js/app.js">
     
-    Backendless.Data.of( "TestTable" ).save( { foo:"FIGHTER" } )
-    .then( function( obj ) {
-        console.log( "object saved. objectId " + obj.objectId + obj)
-    } )
-    .catch( function( error ) {
-        console.log( "got error - " + error )
-    })
+  var APP_ID = '16E7A470-CA4B-E968-FF01-67A48410EC00';
+  var API_KEY = '14A9D809-79E7-8449-FF88-38C6614DDE00';
 
-Backendless.Data.of( "TestTable" ).save( { meSO:"Hornly" } )
-    .then( function( obj ) {
-        console.log( "object saved. objectId " + obj.objectId )
-    } )
-    .catch( function( error ) {
-        console.log( "got error - " + error )
-    })
+  Backendless.serverURL = 'https://api.backendless.com';
+  Backendless.initApp(APP_ID, API_KEY);
+      Backendless.Data.of( "TestTable" ).save( { foo:"FIGHTER" } )
+      .then( function( obj ) {
+          console.log( "object saved. objectId " + obj.objectId + obj)
+      } )
+      .catch( function( error ) {
+          console.log( "got error - " + error )
+      })
+
+  Backendless.Data.of( "TestTable" ).save( { meSO:"Hornly" } )
+      .then( function( obj ) {
+          console.log( "object saved. objectId " + obj.objectId )
+      } )
+      .catch( function( error ) {
+          console.log( "got error - " + error )
+      })
   
   </script>
   
+  <form>
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey"><br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+  </form>
+  
+
 </body>
 </html>
                 
