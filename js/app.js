@@ -4,19 +4,19 @@ var API_KEY = '14A9D809-79E7-8449-FF88-38C6614DDE00';
 Backendless.serverURL = 'https://api.backendless.com';
 Backendless.initApp(APP_ID, API_KEY);
 
-Backendless.Data.of( "TestTable" ).save( { foo:"FIGHTER" } )
-    .then( function( obj ) {
-        console.log( "object saved. objectId " + obj.objectId + obj)
-    } )
-    .catch( function( error ) {
-        console.log( "got error - " + error )
-    })
+// Backendless.Data.of( "TestTable" ).save( { foo:"FIGHTER" } )
+//     .then( function( obj ) {
+//         console.log( "object saved. objectId " + obj.objectId + obj)
+//     } )
+//     .catch( function( error ) {
+//         console.log( "got error - " + error )
+//     })
 
-Backendless.Data.of( "TestTable" ).save( { meSO:"Hornly" } )
-    .then( function( obj ) {
-        console.log( "object saved. objectId " + obj.objectId )
-    } )
-    .catch( function( error ) {
-        console.log( "got error - " + error )
-    })
+// Backendless.Data.of( "TestTable" ).save( { meSO:"Hornly" } )
+//     .then( function( obj ) {
+//         console.log( "object saved. objectId " + obj.objectId )
+//     } )
+//     .catch( function( error ) {
+//         console.log( "got error - " + error )
+//     })
                     
