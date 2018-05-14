@@ -11,4 +11,12 @@ Backendless.Data.of( "TestTable" ).save( { foo:"FIGHTER_BRUH" } )
     .catch( function( error ) {
         console.log( "got error - " + error )
     })
+
+Backendless.Data.of( "TestTable" ).save( { meSo:"Hornly" } )
+    .then( function( obj ) {
+        console.log( "object saved. objectId " + obj.objectId )
+    } )
+    .catch( function( error ) {
+        console.log( "got error - " + error )
+    })
                     
