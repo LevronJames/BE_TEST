@@ -20,38 +20,40 @@
   <form>
   <fieldset>
     <legend>Personal information:</legend>
-    First name:<br>
+    
+  <select id="foo_hours">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  </select>
+    
+    foo:<br>
     <input type="text" name="foo" id="foo"><br>
-    Last name:<br>
-    //<input type="text" name="meSO" id="meSO"><br><br>
+    <!--Last name:<br>
+    <input type="text" name="meSO" id="meSO"><br><br> -->
     <input type="button" value="Submit" onclick="javascript:handleClick()">
   </fieldset>
   </form>
   
   <script>
-  function handleClick()
-  {
-//     var endpoint = document.getElementById("foo").value,
-//     secretkey = document.getElementById("meSO").value,
-//     var requestObject = new Request( {
-//       apiEndpoint: endpoint,
-//       apiSecretkey: secretkey,
-//       emailAddress: email,
-//     });
-    
-//     var savedRequest = Backendless.Persistence.of( Request ).save( requestObject );
-    
-    var fooVal = document.getElementById("foo").value
-    
-    Backendless.Data.of( "TestTable" ).save( { foo:fooVal } )
-    .then( function( obj ) {
-        console.log( "object saved. objectId " + obj.objectId + obj)
-    } )
-    .catch( function( error ) {
-        console.log( "got error - " + error )
-    })
-  }
-    
+    function handleClick()
+    { 
+      var fooVal = document.getElementById("foo").value
+      var fooHoursVal = document.getElementById("foo_hours").value
+
+      Backendless.Data.of( "TestTable" ).save({ foo : fooVal , fooHours : fooHoursVal})
+      .then( function( obj ) {
+          console.log( "object saved. objectId " + obj.objectId + obj)
+      } )
+      .catch( function( error ) {
+          console.log( "got error - " + error )
+      })
+    }
   </script> 
 
 </body>
