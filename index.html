@@ -15,6 +15,23 @@
 </head>
 <body>
   <script src="js/app.js"></script>
+  
+  Backendless.Data.of( "TestTable" ).save( { foo:"FIGHTER" } )
+    .then( function( obj ) {
+        console.log( "object saved. objectId " + obj.objectId + obj)
+    } )
+    .catch( function( error ) {
+        console.log( "got error - " + error )
+    })
+
+Backendless.Data.of( "TestTable" ).save( { meSO:"Hornly" } )
+    .then( function( obj ) {
+        console.log( "object saved. objectId " + obj.objectId )
+    } )
+    .catch( function( error ) {
+        console.log( "got error - " + error )
+    })
+  
 </body>
 </html>
                 
