@@ -17,36 +17,36 @@
   
   <script src="js/app.js">
     
-  var APP_ID = '16E7A470-CA4B-E968-FF01-67A48410EC00';
-  var API_KEY = '14A9D809-79E7-8449-FF88-38C6614DDE00';
+//   var APP_ID = '16E7A470-CA4B-E968-FF01-67A48410EC00';
+//   var API_KEY = '14A9D809-79E7-8449-FF88-38C6614DDE00';
 
-  Backendless.serverURL = 'https://api.backendless.com';
-  Backendless.initApp(APP_ID, API_KEY);
-      Backendless.Data.of( "TestTable" ).save( { foo:"FIGHTER" } )
-      .then( function( obj ) {
-          console.log( "object saved. objectId " + obj.objectId + obj)
-      } )
-      .catch( function( error ) {
-          console.log( "got error - " + error )
-      })
+//   Backendless.serverURL = 'https://api.backendless.com';
+//   Backendless.initApp(APP_ID, API_KEY);
+//       Backendless.Data.of( "TestTable" ).save( { foo:"FIGHTER" } )
+//       .then( function( obj ) {
+//           console.log( "object saved. objectId " + obj.objectId + obj)
+//       } )
+//       .catch( function( error ) {
+//           console.log( "got error - " + error )
+//       })
 
-  Backendless.Data.of( "TestTable" ).save( { meSO:"Hornly" } )
-      .then( function( obj ) {
-          console.log( "object saved. objectId " + obj.objectId )
-      } )
-      .catch( function( error ) {
-          console.log( "got error - " + error )
-      })
+//   Backendless.Data.of( "TestTable" ).save( { meSO:"Hornly" } )
+//       .then( function( obj ) {
+//           console.log( "object saved. objectId " + obj.objectId )
+//       } )
+//       .catch( function( error ) {
+//           console.log( "got error - " + error )
+//       })
   
   </script>
   
-  <form>
+  <form action="js/app.js">
   <fieldset>
     <legend>Personal information:</legend>
     First name:<br>
-    <input type="text" name="firstname" value="Mickey"><br>
+    <input type="text" name="firstname"><br>
     Last name:<br>
-    <input type="text" name="lastname" value="Mouse"><br><br>
+    <input type="text" name="lastname"><br><br>
     <input type="submit" value="Submit">
   </fieldset>
   </form>
